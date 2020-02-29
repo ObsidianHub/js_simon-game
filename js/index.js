@@ -45,6 +45,20 @@ startButton.addEventListener("click", event => {
   }
 });
 
+// event listeners for each button
+topLeft.addEventListener("click", event => {
+  if (on) {
+    playerOrder.push(1);
+    check();
+    one();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
