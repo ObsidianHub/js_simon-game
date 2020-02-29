@@ -81,6 +81,21 @@ function four() {
   bottomRight.style.backgroundColor = "lightskyblue";
 }
 
+// color manager functions
+function clearColor() {
+  topLeft.style.backgroundColor = "darkgreen";
+  topRight.style.backgroundColor = "darkred";
+  bottomLeft.style.backgroundColor = "goldenrod";
+  bottomRight.style.backgroundColor = "darkblue";
+}
+
+function flashColor() {
+  topLeft.style.backgroundColor = "lightgreen";
+  topRight.style.backgroundColor = "tomato";
+  bottomLeft.style.backgroundColor = "yellow";
+  bottomRight.style.backgroundColor = "lightskyblue";
+}
+
 // event listeners for each button
 topLeft.addEventListener("click", event => {
   if (on) {
@@ -134,17 +149,9 @@ bottomRight.addEventListener("click", event => {
   }
 });
 
-// color manager functions
-function clearColor() {
-  topLeft.style.backgroundColor = "darkgreen";
-  topRight.style.backgroundColor = "darkred";
-  bottomLeft.style.backgroundColor = "goldenrod";
-  bottomRight.style.backgroundColor = "darkblue";
-}
-
-function flashColor() {
-  topLeft.style.backgroundColor = "lightgreen";
-  topRight.style.backgroundColor = "tomato";
-  bottomLeft.style.backgroundColor = "yellow";
-  bottomRight.style.backgroundColor = "lightskyblue";
+function winGame() {
+  flashColor();
+  turnCounter.innerHTML = "WIN!";
+  on = false;
+  win = true;
 }
