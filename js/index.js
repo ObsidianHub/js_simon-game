@@ -44,3 +44,18 @@ startButton.addEventListener("click", event => {
     play();
   }
 });
+
+// color manager functions
+function clearColor() {
+  topLeft.style.backgroundColor = "darkgreen";
+  topRight.style.backgroundColor = "darkred";
+  bottomLeft.style.backgroundColor = "goldenrod";
+  bottomRight.style.backgroundColor = "darkblue";
+}
+
+function flashColor() {
+  topLeft.style.backgroundColor = "lightgreen";
+  topRight.style.backgroundColor = "tomato";
+  bottomLeft.style.backgroundColor = "yellow";
+  bottomRight.style.backgroundColor = "lightskyblue";
+}
