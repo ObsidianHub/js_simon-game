@@ -149,6 +149,45 @@ bottomRight.addEventListener("click", event => {
   }
 });
 
+function check() {
+  if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
+    good = false;
+
+  if (playerOrder.length == 3 && good) {
+    winGame();
+  }
+
+  if (good == false) {
+    flashColor();
+    turnCounter.innerHTML = "NO!";
+    setTimeout(() => {
+      turnCounter.innerHTML = turn;
+      clearColor();
+
+      if (strict) {
+        play();
+      } else {
+        compTurn = true;
+        flash = 0;
+        playerOrder = [];
+        good = true;
+        intervalId = setInterval(gameTurn, 800);
+      }
+    }, 800);
+
+    noise = false;
+  }
+
+  if (turn == playerOrder.length && good && !win) {
+    turn++;
+    playerOrder = [];
+    compTurn = true;
+    flash = 0;
+    turnCounter.innerHTML = turn;
+    intervalId = setInterval(gameTurn, 800);
+  }
+}
+
 function winGame() {
   flashColor();
   turnCounter.innerHTML = "WIN!";
