@@ -72,6 +72,19 @@ topRight.addEventListener("click", event => {
   }
 });
 
+bottomLeft.addEventListener("click", event => {
+  if (on) {
+    playerOrder.push(3);
+    check();
+    three();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
