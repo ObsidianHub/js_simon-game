@@ -45,6 +45,42 @@ startButton.addEventListener("click", event => {
   }
 });
 
+function one() {
+  if (noise) {
+    let audio = document.getElementById("clip1");
+    audio.play();
+  }
+  noise = true;
+  topLeft.style.backgroundColor = "lightgreen";
+}
+
+function two() {
+  if (noise) {
+    let audio = document.getElementById("clip2");
+    audio.play();
+  }
+  noise = true;
+  topRight.style.backgroundColor = "tomato";
+}
+
+function three() {
+  if (noise) {
+    let audio = document.getElementById("clip3");
+    audio.play();
+  }
+  noise = true;
+  bottomLeft.style.backgroundColor = "yellow";
+}
+
+function four() {
+  if (noise) {
+    let audio = document.getElementById("clip4");
+    audio.play();
+  }
+  noise = true;
+  bottomRight.style.backgroundColor = "lightskyblue";
+}
+
 // event listeners for each button
 topLeft.addEventListener("click", event => {
   if (on) {
