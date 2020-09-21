@@ -9,3 +9,12 @@ let order = [],
   noise = true,
   on = false,
   win;
+
+const turnCounter = document.querySelector("#turn"),
+  topLeft = document.querySelector("#topleft"),
+  topRight = document.querySelector("#topright"),
+  bottomLeft = document.querySelector("#bottomleft"),
+  bottomRight = document.querySelector("#bottomright"),
+  strictButton = document.querySelector("#strict"),
+  onButton = document.querySelector("#on"),
+  startButton = document.querySelector("#start");
