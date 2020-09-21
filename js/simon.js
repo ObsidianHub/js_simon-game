@@ -18,3 +18,11 @@ const turnCounter = document.querySelector("#turn"),
   strictButton = document.querySelector("#strict"),
   onButton = document.querySelector("#on"),
   startButton = document.querySelector("#start");
+
+strictButton.addEventListener("click", (event) => {
+  if (strictButton.checked == true) {
+    strict = true;
+  } else {
+    strict = false;
+  }
+});
