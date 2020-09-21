@@ -1,0 +1,11 @@
+let order = [],
+  playerOrder = [],
+  flash,
+  turn,
+  good,
+  compTurn,
+  intervalId,
+  strict = false,
+  noise = true,
+  on = false,
+  win;
