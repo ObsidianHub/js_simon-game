@@ -62,6 +62,28 @@ function play() {
   intervalId = setInterval(gameTurn, 800);
 }
 
+function gameTurn() {
+  on = false;
+
+  if (flash == turn) {
+    clearInterval(intervalId);
+    compTurn = false;
+    clearColor();
+    on = true;
+  }
+
+  if (compTurn) {
+    clearColor();
+    setTimeout(() => {
+      if (order[flash] == 1) one();
+      if (order[flash] == 2) two();
+      if (order[flash] == 3) three();
+      if (order[flash] == 4) four();
+      flash++;
+    }, 200);
+  }
+}
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
