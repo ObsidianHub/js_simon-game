@@ -39,6 +39,12 @@ onButton.addEventListener("click", (event) => {
   }
 });
 
+startButton.addEventListener("click", (event) => {
+  if (on || win) {
+    play();
+  }
+});
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
