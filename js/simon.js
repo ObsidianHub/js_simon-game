@@ -26,3 +26,11 @@ strictButton.addEventListener("click", (event) => {
     strict = false;
   }
 });
+
+// color manager functions
+function clearColor() {
+  topLeft.style.backgroundColor = "darkgreen";
+  topRight.style.backgroundColor = "darkred";
+  bottomLeft.style.backgroundColor = "goldenrod";
+  bottomRight.style.backgroundColor = "darkblue";
+}
