@@ -111,6 +111,15 @@ function three() {
   bottomLeft.style.backgroundColor = "yellow";
 }
 
+function four() {
+  if (noise) {
+    let audio = document.getElementById("clip4");
+    audio.play();
+  }
+  noise = true;
+  bottomRight.style.backgroundColor = "lightskyblue";
+}
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
