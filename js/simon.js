@@ -84,6 +84,15 @@ function gameTurn() {
   }
 }
 
+function one() {
+  if (noise) {
+    let audio = document.getElementById("clip1");
+    audio.play();
+  }
+  noise = true;
+  topLeft.style.backgroundColor = "lightgreen";
+}
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
