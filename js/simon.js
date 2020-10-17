@@ -216,6 +216,15 @@ function check() {
 
     noise = false;
   }
+
+  if (turn == playerOrder.length && good && !win) {
+    turn++;
+    playerOrder = [];
+    compTurn = true;
+    flash = 0;
+    turnCounter.innerHTML = turn;
+    intervalId = setInterval(gameTurn, 800);
+  }
 }
 
 function winGame() {
