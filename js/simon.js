@@ -187,3 +187,10 @@ bottomRight.addEventListener("click", (event) => {
     }
   }
 });
+
+function winGame() {
+  flashColor();
+  turnCounter.innerHTML = "WIN!";
+  on = false;
+  win = true;
+}
