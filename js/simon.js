@@ -93,6 +93,15 @@ function one() {
   topLeft.style.backgroundColor = "lightgreen";
 }
 
+function two() {
+  if (noise) {
+    let audio = document.getElementById("clip2");
+    audio.play();
+  }
+  noise = true;
+  topRight.style.backgroundColor = "tomato";
+}
+
 // color manager functions
 function clearColor() {
   topLeft.style.backgroundColor = "darkgreen";
