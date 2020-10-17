@@ -134,3 +134,17 @@ function flashColor() {
   bottomLeft.style.backgroundColor = "yellow";
   bottomRight.style.backgroundColor = "lightskyblue";
 }
+
+// event listeners for each button
+topLeft.addEventListener("click", (event) => {
+  if (on) {
+    playerOrder.push(1);
+    check();
+    one();
+    if (!win) {
+      setTimeout(() => {
+        clearColor();
+      }, 300);
+    }
+  }
+});
