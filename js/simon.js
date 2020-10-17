@@ -188,6 +188,15 @@ bottomRight.addEventListener("click", (event) => {
   }
 });
 
+function check() {
+  if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
+    good = false;
+
+  if (playerOrder.length == 3 && good) {
+    winGame();
+  }
+}
+
 function winGame() {
   flashColor();
   turnCounter.innerHTML = "WIN!";
