@@ -19,7 +19,7 @@ const turnCounter = document.querySelector("#turn"),
   onButton = document.querySelector("#on"),
   startButton = document.querySelector("#start");
 
-strictButton.addEventListener("click", (event) => {
+strictButton.addEventListener("click", () => {
   if (strictButton.checked == true) {
     strict = true;
   } else {
@@ -27,7 +27,7 @@ strictButton.addEventListener("click", (event) => {
   }
 });
 
-onButton.addEventListener("click", (event) => {
+onButton.addEventListener("click", () => {
   if (onButton.checked == true) {
     on = true;
     turnCounter.innerHTML = "-";
@@ -39,7 +39,7 @@ onButton.addEventListener("click", (event) => {
   }
 });
 
-startButton.addEventListener("click", (event) => {
+startButton.addEventListener("click", () => {
   if (on || win) {
     play();
   }
@@ -136,7 +136,7 @@ function flashColor() {
 }
 
 // event listeners for each button
-topLeft.addEventListener("click", (event) => {
+topLeft.addEventListener("click", () => {
   if (on) {
     playerOrder.push(1);
     check();
@@ -149,7 +149,7 @@ topLeft.addEventListener("click", (event) => {
   }
 });
 
-topRight.addEventListener("click", (event) => {
+topRight.addEventListener("click", () => {
   if (on) {
     playerOrder.push(2);
     check();
@@ -162,7 +162,7 @@ topRight.addEventListener("click", (event) => {
   }
 });
 
-bottomLeft.addEventListener("click", (event) => {
+bottomLeft.addEventListener("click", () => {
   if (on) {
     playerOrder.push(3);
     check();
@@ -175,7 +175,7 @@ bottomLeft.addEventListener("click", (event) => {
   }
 });
 
-bottomRight.addEventListener("click", (event) => {
+bottomRight.addEventListener("click", () => {
   if (on) {
     playerOrder.push(4);
     check();
